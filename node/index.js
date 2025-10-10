@@ -36,7 +36,7 @@ app.get('/', (req,res) => {
         }
         
         res.send(`
-            <h1>Full Cycle</h1>
+            <h1>Full Cycle Rocks!</h1>
             <ul>
               ${results.map((item) => `<li>id [${item.id}] - name [${item.name}]</li>`)}
             </ul>
