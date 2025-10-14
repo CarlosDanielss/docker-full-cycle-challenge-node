@@ -20,6 +20,8 @@ services:
     networks:
       - node-net
     tty: true
+    volumes:
+      - ./node:/app
     depends_on:
       - db
   

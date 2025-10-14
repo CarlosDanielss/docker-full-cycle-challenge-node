@@ -2,9 +2,7 @@ FROM node:22.19.0
 
 WORKDIR /app
 
-COPY index.js .
-COPY package.json .
-COPY package-lock.json .
+COPY . .
 
 RUN npm ci
 
