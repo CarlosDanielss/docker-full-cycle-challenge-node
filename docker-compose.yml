@@ -21,6 +21,7 @@ services:
       - node-net
     tty: true
     volumes:
+      - /app/node_modules
       - ./node:/app
     depends_on:
       - db
