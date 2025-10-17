@@ -1,4 +1,4 @@
-FROM node:22.19.0
+FROM node:22.19.0-alpine
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ COPY . .
 
 RUN npm ci
 
-RUN apt-get update && apt-get install -y wget
+RUN apk add --no-cache wget tar
 
 ENV DOCKERIZE_VERSION v0.6.1
 RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
